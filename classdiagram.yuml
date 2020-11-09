@@ -1,0 +1,7 @@
+// {type:class}
+// {direction:topDown}
+// {generate:true}
+
+[Game | -canvas:HTMLCanvasElement;-ctx:CanvasRenderingContext2D;-fruit:Fruit array;-counter:number;-score:number;|-loop();-mouseHandler(event:MouseEvent);-draw();-move();-writeTextToCanvas(text:string, fontSize:number, xCoordinate:number, yCoordinate:number, alignmen:CanvasTextAlign, color:string);-randomNumber(min:number, max:number); ]->[Fruit | #name:string;#lifespan:number;#xPos:number;#yPos:number;#image:HTMLImageElement | +isKeyDown(number);+getLifeSpan();+getName();+getXPos();+getYPos();+getImage();+draw(ctx:CanvasRenderingContext2D);+move(canvas:HTMLCanvasElement)]
+[Fruit | #name:string;#lifespan:number;#xPos:number;#yPos:number;#image:HTMLImageElement | +isKeyDown(number);+getLifeSpan();+getName();+getXPos();+getYPos();+getImage();+draw(ctx:CanvasRenderingContext2D);+move(canvas:HTMLCanvasElement)]^[Apple|-xVel:number;-yVel:number;|+getXVel();+getYVel();+move(canvas:HTMLCanvasElement)]
+[Fruit | #name:string;#lifespan:number;#xPos:number;#yPos:number;#image:HTMLImageElement | +isKeyDown(number);+getLifeSpan();+getName();+getXPos();+getYPos();+getImage();+draw(ctx:CanvasRenderingContext2D);+move(canvas:HTMLCanvasElement)]^[Kiwi]
