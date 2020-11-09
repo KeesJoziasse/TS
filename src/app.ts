@@ -1,42 +1,14 @@
-class Animal
-{
-    private readonly name: string
-    private readonly legs: number
-    private readonly sound: string
+let myName:string = "Kees";
 
-    public constructor(name: string, legs: number, sound: string)
-    {
-        this.name = name
-        this.legs = legs
-        this.sound = sound
-    }
+let myAge:number = 23;
 
-    public getName(): string
-    {
-        return this.name
-    }
+const productPrices:number[] = [2.10, 4.99, 5.60, 0.40, 5.44, 7.33, 2.33, 2.49, 2.10];
 
-    public getLegs(): number
-    {
-        return this.legs
-    }
+function calculateTotal(){
 
-    public getSound(): string
-    {
-        return this.sound
-    }
+const productSum = productPrices.reduce(function(a:number, b:number){
+    return a + b;
+},0);
+console.log(productSum);
 }
-
-const animals = [
-     new Animal('dog', 4, 'woof'),
-     new Animal('cat', 4, 'meow')
-]
-
-animals.forEach(
-    (animal) => console.log(
-        'A %s has %s legs and goes %s!',
-        animal.getName(),
-        animal.getLegs(),
-        animal.getSound()
-    )
-)
+calculateTotal()

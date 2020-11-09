@@ -1,22 +1,11 @@
-class Animal {
-    constructor(name, legs, sound) {
-        this.name = name;
-        this.legs = legs;
-        this.sound = sound;
-    }
-    getName() {
-        return this.name;
-    }
-    getLegs() {
-        return this.legs;
-    }
-    getSound() {
-        return this.sound;
-    }
+let myName = "Kees";
+let myAge = 23;
+const productPrices = [2.10, 4.99, 5.60, 0.40, 5.44, 7.33, 2.33, 2.49, 2.10];
+function calculateTotal() {
+    const productSum = productPrices.reduce(function (a, b) {
+        return a + b;
+    }, 0);
+    console.log(productSum);
 }
-const animals = [
-    new Animal('dog', 4, 'woof'),
-    new Animal('cat', 4, 'meow')
-];
-animals.forEach((animal) => console.log('A %s has %s legs and goes %s!', animal.getName(), animal.getLegs(), animal.getSound()));
+calculateTotal();
 //# sourceMappingURL=app.js.map
